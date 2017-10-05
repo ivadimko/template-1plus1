@@ -1,3 +1,10 @@
-.button{
-	font-size: 1rem;
+header{
+	background-color: rgba(lightblue, .5);
+}
+.header{
+	&__content{
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
 }

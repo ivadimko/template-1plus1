@@ -1,0 +1,113 @@
+@import "bourbon";
+@import "../../../assets/scss/base/variables";
+@import "../../../assets/scss/base/mixins";
+
+.header__top-shadow{
+	height: 80px;
+	position: relative;
+	z-index: 3;
+	@include linear-gradient(0deg, transparent 0%, $black_color 100%);
+	color: $white_color;
+}
+.top-line{
+	&__logo{
+		background-color: $active_color;
+		transition: background-color $time ease;
+		line-height: 0;
+		padding: 20px 8px;
+		&:hover{
+			background-color: darken($active_color, 5%);
+		}
+	}
+	&__item{
+		height: 70%;
+		padding: 0 35px 0 25px;
+		font-size: 1.2rem;
+		border-right: 1px solid #818181;
+		&.icon{
+			padding: 0 15px;
+			font-size: 3.2rem;
+		}
+	}	
+}
+.current{
+	&__weekday{
+		display: block;
+	}
+}
+.weather{
+	&__icon{
+		margin: auto;
+		font-size: 2.5rem;
+	}
+	&__description{
+		margin-left: 20px;
+	}
+	&__city{
+		display: block;
+	}
+	&__temp{
+		font-size: 1.4rem;
+	}
+}
+.currency{
+	padding: 0 25px 0 10px;
+	&__item{
+		margin-right: 15px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__value{
+		@extend .weather__temp;
+	}
+	&__name{
+		margin: 0 10px 0 7px;
+	}
+	&__name{
+		font-size: 1.5rem !important;
+	}
+}
+.right__icon{
+	fill: $white_color;
+	transition: fill $time ease;
+	height: 100%;
+	&:hover{
+		fill: darken($white_color, 20%);
+	}
+}
+.search{
+	position: relative;
+	height: 100%;
+	margin-right: 15px;
+	&:hover{
+		.right__icon{fill: #222222}
+		.search__input{
+			width: 350px;
+			opacity: .5;
+		}
+	}
+	&__button{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		transform: translate(0,-50%);
+	}
+	&__input{
+		border: none;
+		border-radius: 10px;
+		outline: none;
+		transition: width $time ease,
+								opacity $time ease;
+		width: 0;
+		font-size: 1.8rem;
+		padding: 10px 0 10px 45px;
+		opacity: 0;
+		&:focus{
+			width: 350px;
+			opacity: 1 !important;
+			+.search__button .right__icon{fill: #222222}
+		}
+	}
+}

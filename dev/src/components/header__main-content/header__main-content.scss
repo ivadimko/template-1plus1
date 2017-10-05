@@ -1,0 +1,115 @@
+@import "bourbon";
+@import "../../../assets/scss/base/variables";
+@import "../../../assets/scss/base/mixins";
+
+.header{
+	&__tabs{
+		margin: 55px 0 105px 10px;
+	}
+	&__tab{
+		position: relative;
+		display: inline-block;
+		height: 30px;
+		width: 3px;
+		background-color: $white_color;
+		opacity: .5;
+		z-index: 3;
+		cursor: pointer;
+		margin-bottom: 10px;
+		transition: opacity $time ease;
+		&::after{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 3px;
+			height: 100%;
+			width: 20px;
+			@include triangle(30px 10px, $white_color, right);
+			transition: transform $time ease;
+			transform-origin: 0 0;
+			transform: scaleX(0);
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 3px;
+			height: 100%;
+			width: 20px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:hover{
+			opacity: .5;
+			&::after{
+				transform: scaleX(1);
+			}
+		}
+		&.active{
+			opacity: 1;
+			&::after{
+				transform: scaleX(1);
+			}
+		}
+	}
+}
+.tab{
+	&__content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		filter: blur(20px);
+		transition: opacity 1s ease,
+								filter 1s ease;
+		&.active{
+			opacity: 1;
+			filter: blur(0);
+		}
+	}
+}
+.content{
+	&__bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-position: center center
+	}
+	&__info{
+		position: absolute;
+		z-index: 3;
+		left: 100px;
+		bottom: 15px;	
+		font-size: 1.4rem;
+	}
+	&__heading{
+		margin: 0 0 5px;
+		padding-right: 445px;
+		&-link{
+			line-height: 40px;
+			color: $white_color;
+			font-family: $primary-font;
+			font-weight: 500;
+			font-size: 3.6rem;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	&__date, &__time{
+		margin-left: 5px;
+	}
+	&__source{
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

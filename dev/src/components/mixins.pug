@@ -1,0 +1,71 @@
+mixin time (datetime, weekday, date, time)
+	time(datetime=datetime).current__datetime
+		span.current__weekday= weekday
+		span.current__date= date
+
+mixin source (source, datetime, date, time)
+	case source
+		when 'day'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__day') ТСН День
+		when 'world'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__world') Світ
+		when 'ukraine'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__ukraine') Україна
+		when 'glamour'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__glamour') Гламур
+		when 'money'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__money') Гроші
+
+	time(datetime=datetime).content__datetime.tsn__default
+		span.content__date= date
+		span.content__time= time
+
+mixin weather (icon, city, temperature)
+	.current__weather.grid-x.aligh-middle
+		i(class='weather__icon wi ' + icon)
+		.weather__description
+			span.weather__city= city
+			span.weather__temp!= temperature + '&deg;C'
+
+mixin currency (state, name, value)
+	.currency__item
+		case state
+			when 'up'
+				svg(
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="5px" height="12px") 
+					image(x="0px" y="0px" width="5px" height="12px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAMAgMAAADXDp++AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///8zmQAzmQD///+BuUfwAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4QoFDRoxhYnjpgAAABlJREFUCNdj4GRg0HJgmNnAEOkAQkAuBgIATTIC/n9Xie0AAAAASUVORK5CYII=")
+			when 'down'
+				svg(
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					width="5px" height="12px")
+					image(x="0px" y="0px" width="5px" height="12px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAMAgMAAADXDp++AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEXMAADMAAD///+7BOFBAAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAHdElNRQfhCgUNHDZNt9GDAAAAE0lEQVQI12NgYWDAhVwcGERBDAAHsQDCn65YcAAAAABJRU5ErkJggg==")
+		case name
+			when 'dollar'
+				i.fa.fa-usd.currency__name
+			when 'euro'
+				i.fa.fa-eur.currency__name
+		span.currency__value= value
+
+mixin tabs(count)
+	- var n = 1
+	while n <= count
+		span(class= 'header__tab js__tab tab-' + n++)
+mixin tab__content(type, content_url, heading, source, datetime, date, time)
+	.tab__content.js__tab-content
+		case type
+			when 'video'
+				h1 wait!
+			when 'photo'
+				div(
+					class='content__bg'
+					style='background-image: url(./assets/img/header__content/' + content_url + ');'
+					)
+		.content__info
+			h2.content__heading
+				a(href='#' title='Читати повний текст новини').content__heading-link= heading
+			+source(source, datetime, date, time)
+
+		

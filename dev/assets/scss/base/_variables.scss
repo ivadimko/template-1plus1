@@ -2,38 +2,46 @@
 
 // Colors
 
-$primary_color							: #54d154;
+$primary_color:             #4c4c45;
+$accent_color:							#33332e;
+$active_color:							#cc0000;
 
-$white											: #ffffff;
-$black											: #111111;
-$dark												: #828181;
-$grey												: #b7b3b3;
-
-$icon_bg										: #e1f3e1;
-
-$text_dark									: #444444;
-$section_dark								: #333333;
-$footer_bottom							: #222222;
-$section_grey								: #f2f1f1;
+$white_color:               #ffffff;
+$black_color:								#000000;
 
 
+$s_menu_bg:									#edede6;
+$s_menu_icon_color:					#bfbfb4;
+$s_date_color:							#bfbfbf;
+$s_icon_color:							#e5e5e5;
+$s_line_color:							#ccccb8;
 
-$mobile-menu__text					: #ffffff;
-$mobile-menu__bg						: #3f4147;
+$aside_bg_color:						#f2f2eb;
+$aside_date_color:					#bfbfac;
+$aside_icon_color:					#d9d9d2;
+$aside_line_color:					#e1e1d3;
+
+$share_src_color:						#c3c4bf;
+$share_line_color:					#e5e5e5;
+$share_icon_color:					#cccccc;
+$share_icon_hover_color:		#5a6aa1;
+
+$tsn_default:								#bfbfbf;
+$tsn_day: 									#811811;
+$tsn_world:									#028fbd;
+$tsn_ukraine:								#ffd400;
+$tsn_glamour:								#ba39e6;
+$tsn_money:									#1bb367;
+$tsn_world:									#028fbd;
+
 
 
 
 // Fonts
 
-$primary_font								: $helvetica;
+$primary_font: 'MyriadPro', $helvetica;
 
-$MontserratBold							: 'MontserratBold', $helvetica;
-$MontserratLight						: 'MontserratLight', $helvetica;
-$NautilusPompiliusRegular		: 'NautilusPompiliusRegular', $helvetica;
-$OpenSansLight							: 'OpenSansLight', $helvetica;
-$ProximaNovaLight						: 'ProximaNovaLight', $helvetica;
-$ProximaNovaRegular					: 'ProximaNovaRegular', $helvetica;
-$ProximaNovaBold						: 'ProximaNovaBold', $helvetica;
+$font-name: '';
 
 $font-size-base: 10px;
 

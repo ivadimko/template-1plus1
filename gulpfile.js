@@ -78,7 +78,7 @@ gulp.task('sass-main', function () {
 
 gulp.task('watch', ['html', 'sass-base', 'sass-main', 'js', 'browser-sync'], function() {
 	gulp.watch('./dev/assets/scss/**/*.scss', ['sass-base']);
-	gulp.watch('./dev/src/components/**/*.scss', ['sass-main']);
+	gulp.watch('./dev/src/**/*.scss', ['sass-main']);
 	gulp.watch('./dev/assets/scripts/**/*.js', browserSync.reload);
 	gulp.watch("./dev/src/**/*.pug", ['html']);
 });

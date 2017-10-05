@@ -1,0 +1,46 @@
+@import "bourbon";
+@import "../assets/scss/base/variables";
+@import "../assets/scss/base/mixins";
+
+html{
+	font-size: 10px;
+}
+body{
+	font-family: $primary-font;
+}
+.body-wrapper{
+	max-width: 1400px;
+	margin: auto;
+	overflow-x: hidden;
+}
+.no{
+	&-border{
+		border: none !important;
+	}
+	&-margin{
+		margin: 0 !important;
+	}
+	&-padding{
+		padding: 0 !important;
+	}
+}
+.tsn{
+	&__default{
+		color: $tsn_default;
+	}
+	&__day{
+		color: $tsn_day;
+	}
+	&__world{
+		color: $tsn_world;
+	}
+	&__ukraine{
+		color: $tsn_ukraine;
+	}
+	&__glamour{
+		color: $tsn_glamour;
+	}
+	&__money{
+		color: $tsn_money;
+	}
+}

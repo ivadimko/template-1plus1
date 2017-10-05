@@ -1,7 +1,3 @@
-@include font-face("MontserratLight", "../fonts/MontserratLight/MontserratLight");
-@include font-face("MontserratBold", "../fonts/MontserratBold/MontserratBold");
-@include font-face("NautilusPompiliusRegular", "../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular");
-@include font-face("OpenSansLight", "../fonts/OpenSansLight/OpenSansLight");
-@include font-face("ProximaNovaLight", "../fonts/ProximaNovaLight/ProximaNovaLight");
-@include font-face("ProximaNovaRegular", "../fonts/ProximaNovaRegular/ProximaNovaRegular");
-@include font-face("ProximaNovaBold", "../fonts/ProximaNovaBold/ProximaNovaBold");
+@include font-face("MyriadPro", "../fonts/MyriadPro/MyriadPro-Regular", 400);
+@include font-face("MyriadPro", "../fonts/MyriadPro/MyriadPro-Bold", 600);
+@include font-face("MyriadPro", "../fonts/MyriadPro/MyriadPro-Semibold", 500);
