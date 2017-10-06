@@ -27,20 +27,114 @@ body{
 .tsn{
 	&__default{
 		color: $tsn_default;
+		&-bg{
+			&:hover{
+				background-color: $tsn_default;
+			}
+		}
 	}
 	&__day{
 		color: $tsn_day;
+		&-bg{
+			&:hover{
+				background-color: $tsn_day;
+			}
+		}
 	}
 	&__world{
 		color: $tsn_world;
+		&-bg{
+			&:hover{
+				background-color: $tsn_world;
+			}
+		}
 	}
 	&__ukraine{
 		color: $tsn_ukraine;
+		&-bg{
+			&:hover{
+				background-color: $tsn_ukraine;
+			}
+		}
 	}
 	&__glamour{
 		color: $tsn_glamour;
+		&-bg{
+			&:hover{
+				background-color: $tsn_glamour;
+			}
+		}
 	}
 	&__money{
 		color: $tsn_money;
+		&-bg{
+			&:hover{
+				background-color: $tsn_money;
+			}
+		}
+	}
+	&__politics{
+		color: $tsn_politics;
+		&-bg{
+			&:hover{
+				background-color: $tsn_politics;
+			}
+		}
+	}
+	&__video{
+		color: $tsn_video;
+		&-bg{
+			&:hover{
+				background-color: $tsn_video;
+			}
+		}
+	}
+	&__editions{
+		color: $tsn_editions;
+		&-bg{
+			&:hover{
+				background-color: $tsn_editions;
+			}
+		}
+	}
+	&__blogs{
+		color: $tsn_blogs;
+		&-bg{
+			&:hover{
+				background-color: $tsn_blogs;
+			}
+		}
+	}
+	&__sport{
+		color: $tsn_sport;
+		&-bg{
+			&:hover{
+				background-color: $tsn_sport;
+			}
+		}
+	}
+	&__ladies{
+		color: $tsn_ladies;
+		&-bg{
+			&:hover{
+				background-color: $tsn_ladies;
+			}
+		}
+	}
+	&__interesting{
+		color: $tsn_interesting;
+		&-bg{
+			&:hover{
+				background-color: $tsn_interesting;
+			}
+		}
+	}
+	&__special{
+		color: $tsn_special;
+		&-bg{
+			&:hover{
+				background-color: $tsn_special;
+			}
+		}
 	}
 }

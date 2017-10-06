@@ -3,7 +3,7 @@ mixin time (datetime, weekday, date, time)
 		span.current__weekday= weekday
 		span.current__date= date
 
-mixin source (source, datetime, date, time)
+mixin source-color (source, datetime, date, time)
 	case source
 		when 'day'
 			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__day') ТСН День
@@ -15,7 +15,6 @@ mixin source (source, datetime, date, time)
 			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__glamour') Гламур
 		when 'money'
 			a(href='#' title='Читати всі новини з даного розділу' class= 'content__source tsn__money') Гроші
-
 	time(datetime=datetime).content__datetime.tsn__default
 		span.content__date= date
 		span.content__time= time
@@ -66,6 +65,33 @@ mixin tab__content(type, content_url, heading, source, datetime, date, time)
 		.content__info
 			h2.content__heading
 				a(href='#' title='Читати повний текст новини').content__heading-link= heading
-			+source(source, datetime, date, time)
+			+source-color(source, datetime, date, time)
 
-		
+mixin categories-line (source)
+	case source
+		when 'day'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__day-bg') ТСН День
+		when 'world'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__world-bg') Світ
+		when 'ukraine'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__ukraine-bg') Україна
+		when 'glamour'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__glamour-bg') Гламур
+		when 'money'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__money-bg') Гроші
+		when 'politics'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__politics-bg') Політика
+		when 'video'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__video-bg') Відео
+		when 'editions'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__editions-bg') Випуски ТСН
+		when 'blogs'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__blogs-bg') Блоги
+		when 'sport'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__sport-bg') Проспорт
+		when 'ladies'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__ladies-bg') Леді
+		when 'interesting'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__interesting-bg') Цікавинки
+		when 'special'
+			a(href='#' title='Читати всі новини з даного розділу' class= 'section__link tsn__special-bg') Спецпроекти

@@ -1,0 +1,52 @@
+@import "bourbon";
+@import "../../../../assets/scss/base/variables";
+@import "../../../../assets/scss/base/mixins";
+
+.section{
+	&__nav{
+		padding-left: 55px;
+		background-color: $s_menu_bg;
+		border-bottom: 1px solid #e6e6df;
+	}
+	&__link{
+		padding: 15px 8px;
+		display: inline-block;
+		text-decoration: none;
+		color: $black_color;
+		font-size: 1.6rem;
+		line-height: 1;
+		transition: background-color $time ease,
+		color $time ease;
+		&:hover{
+			color: $white_color;
+		}
+	}
+	&__additional-cats{
+		display: inline-block;
+		height: 100%;
+		transition: background-color $time ease;
+		padding-left: 15px;
+		cursor: pointer;
+		&:hover{
+			#hamburger{
+				span:nth-child(1) {
+					top: 6px;
+					transform: rotate(135deg);
+				}
+				span:nth-child(2) {
+					opacity: 0;
+					left: -20px;
+				}
+				span:nth-child(3) {
+					top: 6px;
+					transform: rotate(-135deg);
+				}
+			}
+			background-color: $accent_color;
+		}
+	}
+}
+.add__link{
+	color: $s_menu_icon_color;
+	padding-left: 8px;
+}

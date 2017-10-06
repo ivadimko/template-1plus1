@@ -1,20 +1,21 @@
 @import "bourbon";
-@import "../../../assets/scss/base/variables";
-@import "../../../assets/scss/base/mixins";
+@import "../../../../assets/scss/base/variables";
+@import "../../../../assets/scss/base/mixins";
 
 .header__top-shadow{
 	height: 80px;
 	position: relative;
 	z-index: 3;
-	@include linear-gradient(0deg, transparent 0%, $black_color 100%);
+	@include linear-gradient(0deg, transparent 0%, rgba($black_color, .8) 100%);
 	color: $white_color;
 }
 .top-line{
 	&__logo{
-		background-color: $active_color;
-		transition: background-color $time ease;
-		line-height: 0;
-		padding: 20px 8px;
+			background-color: $active_color;
+			transition: background-color $time ease;
+			line-height: 0;
+			height: 60px;
+			width: 66px;
 		&:hover{
 			background-color: darken($active_color, 5%);
 		}

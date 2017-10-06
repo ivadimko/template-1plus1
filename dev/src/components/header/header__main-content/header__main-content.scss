@@ -1,6 +1,6 @@
 @import "bourbon";
-@import "../../../assets/scss/base/variables";
-@import "../../../assets/scss/base/mixins";
+@import "../../../../assets/scss/base/variables";
+@import "../../../../assets/scss/base/mixins";
 
 .header{
 	&__tabs{
@@ -62,12 +62,15 @@
 		height: 100%;
 		width: 100%;
 		opacity: 0;
+		visibility: hidden;
 		filter: blur(20px);
 		transition: opacity 1s ease,
-								filter 1s ease;
+								filter 1s ease,
+								visibility 1s ease;
 		&.active{
 			opacity: 1;
 			filter: blur(0);
+			visibility: visible;
 		}
 	}
 }
@@ -79,7 +82,17 @@
 		height: 100%;
 		width: 100%;
 		background-size: cover;
-		background-position: center center
+		background-position: center center;
+		&::after{
+			content: '';
+			height: 80px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+	    @include linear-gradient(180deg, transparent 0%, rgba($black_color, .8) 100%);
+		}
 	}
 	&__info{
 		position: absolute;
@@ -90,7 +103,7 @@
 	}
 	&__heading{
 		margin: 0 0 5px;
-		padding-right: 445px;
+		padding-right: 420px;
 		&-link{
 			line-height: 40px;
 			color: $white_color;

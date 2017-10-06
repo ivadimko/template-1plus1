@@ -1,6 +1,7 @@
 $(document).foundation();
 $(window).on('load', () => {
 	switchTabs('.js__tab', '.js__tab-content');
+	switchTabs('.filter__value');
 	//alert('hi');
 });
 function switchTabs(selectorTab, selectorContent) {

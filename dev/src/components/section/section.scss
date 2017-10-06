@@ -1,0 +1,40 @@
+@import "bourbon";
+@import "../../../assets/scss/base/variables";
+@import "../../../assets/scss/base/mixins";
+
+.section{
+	padding: 0 450px 0 50px;
+	color: $primary_color;
+}
+#hamburger {
+	display: inline-block;
+	width: 15px;
+	height: 12px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: transform $time ease;
+	span:nth-child(1) {
+		top: 0px;
+	}
+	span{
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background-color: $s_menu_icon_color;
+		opacity: 1;
+		left: 0;
+		transition: transform $time ease,
+		opacity $time ease,
+		left $time ease;
+	}
+
+	span:nth-child(2) {
+		top: 5px;
+	}
+
+	span:nth-child(3) {
+		top: 10px;
+	}
+
+}
