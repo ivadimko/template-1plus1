@@ -12,4 +12,37 @@ section.section.section__news
 		+news-content('4.jpg', 'НБУ оголосив про зняття трьох адміністративних обмежень на валютному ринку', 'money', 2017-05-28, '28 травня, 2017', '08:51', 31, 3015)
 		+news-content('5.jpg', 'Флінн погодився передати до Сенату документи в рамках розслідування щодо втручання РФ у вибори ...', 'world', 2017-05-27, '27 травня, 2017', '22:18', 8, 2005)
 		+news-content('6.jpg', 'Жодних доказів застосування Асадом хімічної зброї немає — Путін', 'world', 2017-05-28, '27 травня, 2017', '21:45', 31, 3015)
+section.section.section__gallery
+	h2.gallery__heading Фото Репортаж
+	.gallery__content.grid-x.grid-padding-x.align-justify
+		.gallery__column.flex-container
+			+gallery__item('1.jpg', 'gallery__item gallery__item--horizontal no-pl', 'Вогонь, водомети і сльозог інний газ: у Венесуелі')
+			.gallery__sub-container.flex-container.align-justify
+				.gallery__sub-column
+					+gallery__item('2.jpg', 'gallery__item no-pl', 'Місс всесвіт за версією всесвіту')
+					+gallery__item('3.jpg', 'gallery__item no-pl no-pb', 'Мітинг за справедливість')
+				.gallery__sub-column
+					+gallery__item('4.jpg', 'gallery__item gallery__item--vertical', 'Дуже популярний чувак')
+				
+		.gallery__column.gallery__column--small
+			+gallery__item('5.jpg', 'gallery__item gallery__item gallery__item--vertical', 'Танцював із Саудами і штурхав колег із НАТО')
+			+gallery__item('6.jpg', 'gallery__item gallery__item', 'Жовтий клоун і зелений клоун')
+		.gallery__column
+			.gallery__sub-container.flex-container.align-justify
+				.gallery__sub-column
+					+gallery__item('7.jpg', 'gallery__item', 'Чувак на камені')
+					+gallery__item('8.jpg', 'gallery__item no-pb', 'Шикарний виріз на сукні')
+				.gallery__sub-column
+					+gallery__item('9.jpg', 'gallery__item gallery__item--vertical', 'Суддю на мило')
+			+gallery__item('10.jpg', 'gallery__item gallery__item--horizontal', 'Кроком руш!')
 
+section.section.section__news
+	a(href='#' class='section__banner' title='Рекламодавець року')
+		img(class='banner__img' src='./assets/img/banner-horizontal.jpg')
+	.news__content.grid-x.grid-margin-x.align-spaced
+		+news-content('1.jpg', 'У столиці Афганістану стався потужний вибух - понад 90 людей поранені, є загиблі', 'world', 2017-05-28, '28 травня, 2017', '08:51', 31, 3015)
+		+news-content('2.jpg', 'В уряді назвали п\'ять областей України з найгіршими дорогами', 'ukraine', 2017-05-28, '28 травня, 2017', '07:23', 2, 1025)
+		+news-content('3.jpg', 'Зіркові гості куми Порошенка. Хто вітав Білозір із днем народження', 'glamour', 2017-05-27, '27 травня, 2017', '22:18', 8, 2005)
+		+news-content('4.jpg', 'НБУ оголосив про зняття трьох адміністративних обмежень на валютному ринку', 'money', 2017-05-28, '28 травня, 2017', '08:51', 31, 3015)
+		+news-content('5.jpg', 'Флінн погодився передати до Сенату документи в рамках розслідування щодо втручання РФ у вибори ...', 'world', 2017-05-27, '27 травня, 2017', '22:18', 8, 2005)
+		+news-content('6.jpg', 'Жодних доказів застосування Асадом хімічної зброї немає — Путін', 'world', 2017-05-28, '27 травня, 2017', '21:45', 31, 3015)
