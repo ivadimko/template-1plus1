@@ -7,7 +7,7 @@
 		padding: 25px 0 7px;
 		font-size: 1.4rem;
 		position: relative;
-		margin-bottom: 100px;
+		margin-bottom: 20px;
 		&:after{
 			content: '';
 			position: absolute;
@@ -18,6 +18,47 @@
 			background-color: $s_line_color;
 		}
 	}
+
+	&__img{
+		height: 190px;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	&__heading{
+		color: $primary_color;
+		font-size: 1.6rem;
+		text-decoration: none;
+		font-weight: 400;
+		line-height: 1.2;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__info{
+		font-size: 1.2rem;
+		margin-bottom: 30px;
+	}
+	&__comments{
+		margin-left: auto;
+	}
+}
+.comments__icon, .views__icon{
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.comments, .views{
+	text-decoration: none;
+	color: $s_icon_color;
+	fill: $s_icon_color;
+	transition: color $time ease,
+							fill $time ease;
+	&:hover{
+		color: darken($s_icon_color, 20%);
+		fill: darken($s_icon_color, 20%);
+	}
+}
+.comments{
+	margin-right: 8px;
 }
 .filter__value{
 	margin-right: 15px;
